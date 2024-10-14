@@ -51,6 +51,7 @@ h6 {
   justify-content: center;
   padding: 10px 20px;
   color: var(--color-space);
+  background-color: var(--color-gray);
 }
 .navbar__container {
   display: flex;

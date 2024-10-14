@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
+  margin-top: 20px;
 }
 .galton-simulation__container {
   display: flex;
@@ -114,7 +115,7 @@
 }
 /* HISTORIAL */
 .history {
-  background-color: var(--color-gray);
+  background-color: #fef6e4;
   padding: 20px;
 }
 .history__title {
