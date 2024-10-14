@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Máquina de Galton</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/simulation.css">
+
+</head>
+
+<body>
+  <!-- barra de navegacion -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__brand">
+        <img src="/assets/icons/joystick.svg" alt="logo pagina" class="navbar__icon">
+        <h1 class="navbar__title">Máquina de Galton</h1>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="/index.html" class="navbar__link">Inicio</a></li>
+        <li><a href="pages/about.html" class="navbar__link">Acerca de</a></li>
+        <li><a href="pages/simulation.html" class="navbar__link">Portfolio</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="galton-simulation">
+    <div class="galton-simulation__container">
+      <!-- TABLERO -->
+      <div class="galton-simulation__board">
+        <h2 class="galton-simulation__title">Simulación máquina de Galton</h2>
+        <div class="simulation-board__container">
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path simulation-cell__sphere"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--neutral"></div>
+          </div>
+          <div class="galton-simulation__row">
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--pin"></div>
+            <div class="galton-simulation__cell galton-simulation__cell--path"></div>
+          </div>
+        </div>
+      </div>
+      <!-- GRAFICA -->
+      <div class="galton-simulation__chart">
+        <h2 class="galton-simulation__title">Simulación máquina de Galton</h2>
+        <div class="simulation-chart__container">
+          <div class="bar-chart">
+            <div class="bar-chart__bar" style="height: 10%;" data-value="8"></div>
+            <div class="bar-chart__bar" style="height: 20%;" data-value="6"></div>
+            <div class="bar-chart__bar" style="height: 30%;" data-value="9"></div>
+            <div class="bar-chart__bar" style="height: 40%;" data-value="5"></div>
+            <div class="bar-chart__bar" style="height: 50%;" data-value="7"></div>
+            <div class="bar-chart__bar" style="height: 70%;" data-value="4"></div>
+            <div class="bar-chart__bar" style="height: 40%;" data-value="3"></div>
+            <div class="bar-chart__bar" style="height: 30%;" data-value="2"></div>
+            <div class="bar-chart__bar" style="height: 20%;" data-value="10"></div>
+            <div class="bar-chart__bar" style="height: 10%;" data-value="1"></div>
+          </div>
+          <div class="bar-chart__labels">
+            <span class="bar-chart__label">1</span>
+            <span class="bar-chart__label">2</span>
+            <span class="bar-chart__label">3</span>
+            <span class="bar-chart__label">4</span>
+            <span class="bar-chart__label">5</span>
+            <span class="bar-chart__label">6</span>
+            <span class="bar-chart__label">7</span>
+            <span class="bar-chart__label">8</span>
+            <span class="bar-chart__label">9</span>
+            <span class="bar-chart__label">10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CONTROLES -->
+  <section>
+    <div class="galton-simulation__controls">
+      <div class="simulation-controls__container">
+        <button class="simulation-button__controls"><img src="/assets/icons/menos.svg" alt="Menos" class="button-icon__controls"></button>
+        <span class="galton-simulation-count" id="ball-count">100</span>
+        <button class="simulation-button__controls"><img src="/assets/icons/mas.svg" alt="" class="button-icon__controls"></button>
+        <button class="simulation-button__controls"><img src="/assets/icons/iniciar.svg" alt="" class="button-icon__controls"></button>
+        <button class="simulation-button__controls"><img src="/assets/icons/reiniciar.svg" alt="" class="button-icon__controls"></button>
+      </div>      
+    </div>
+  </section>
+  <!-- HISTORIAL -->
+   <hr>
+  <section class="history">
+    <h2 class="history__title">Historial de simulaciones</h2>
+    <div class="history__results">
+      <div class="bar-container-history">
+        <div class="historical__data">
+          <div class="historical-data__number">Esferas:150</div>
+          <div class="historical-data__date">Fecha: 10-09-2024</div>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-chart__bar" style="height: 10%;" data-value="8"></div>
+          <div class="bar-chart__bar" style="height: 20%;" data-value="6"></div>
+          <div class="bar-chart__bar" style="height: 30%;" data-value="9"></div>
+          <div class="bar-chart__bar" style="height: 40%;" data-value="5"></div>
+          <div class="bar-chart__bar" style="height: 50%;" data-value="7"></div>
+          <div class="bar-chart__bar" style="height: 70%;" data-value="4"></div>
+          <div class="bar-chart__bar" style="height: 40%;" data-value="3"></div>
+          <div class="bar-chart__bar" style="height: 30%;" data-value="2"></div>
+          <div class="bar-chart__bar" style="height: 20%;" data-value="10"></div>
+          <div class="bar-chart__bar" style="height: 10%;" data-value="1"></div>
+        </div>
+        <div class="bar-chart__labels">
+          <span class="bar-chart__label">1</span>
+          <span class="bar-chart__label">2</span>
+          <span class="bar-chart__label">3</span>
+          <span class="bar-chart__label">4</span>
+          <span class="bar-chart__label">5</span>
+          <span class="bar-chart__label">6</span>
+          <span class="bar-chart__label">7</span>
+          <span class="bar-chart__label">8</span>
+          <span class="bar-chart__label">9</span>
+          <span class="bar-chart__label">10</span>
+        </div>
+      </div>
+      <!-- ------------ -->
+      <div class="bar-container-history">
+        <div class="historical__data">
+          <div class="historical-data__number">Esferas:150</div>
+          <div class="historical-data__date">Fecha: 10-09-2024</div>
+        </div>
+        <div class="bar-chart">
+          <div class="bar-chart__bar" style="height: 10%;" data-value="8"></div>
+          <div class="bar-chart__bar" style="height: 20%;" data-value="6"></div>
+          <div class="bar-chart__bar" style="height: 30%;" data-value="9"></div>
+          <div class="bar-chart__bar" style="height: 40%;" data-value="5"></div>
+          <div class="bar-chart__bar" style="height: 50%;" data-value="7"></div>
+          <div class="bar-chart__bar" style="height: 70%;" data-value="4"></div>
+          <div class="bar-chart__bar" style="height: 40%;" data-value="3"></div>
+          <div class="bar-chart__bar" style="height: 30%;" data-value="2"></div>
+          <div class="bar-chart__bar" style="height: 20%;" data-value="10"></div>
+          <div class="bar-chart__bar" style="height: 10%;" data-value="1"></div>
+        </div>
+        <div class="bar-chart__labels">
+          <span class="bar-chart__label">1</span>
+          <span class="bar-chart__label">2</span>
+          <span class="bar-chart__label">3</span>
+          <span class="bar-chart__label">4</span>
+          <span class="bar-chart__label">5</span>
+          <span class="bar-chart__label">6</span>
+          <span class="bar-chart__label">7</span>
+          <span class="bar-chart__label">8</span>
+          <span class="bar-chart__label">9</span>
+          <span class="bar-chart__label">10</span>
+        </div>
+      </div>
+      <!-- ---------- -->
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__social">
+        <a href="#" target="_blank" class="footer__link"><img src="/assets/icons/github.svg" alt="LinkedIn"
+            class="footer__icon" /></a>
+        <a href="#" target="_blank" class="footer__link"><img src="/assets/icons/linkedin.svg" alt="GitHub"
+            class="footer__icon" /></a>
+      </div>
+      <p class="footer__credits">Creado por BLADIMIR BENAVIDES</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

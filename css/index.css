@@ -1,0 +1,59 @@
+@import url("/css/style.css");
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  background-color: var(--color-white);
+  height: 100%;
+}
+.galton {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.galton__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 1040px;
+}
+.galton__image {
+  width: 400px;
+  height: 400px;
+  height: auto;
+}
+.galton__description {
+  padding: 40px;
+}
+.galton__title {
+  font-size: 3.5rem;
+  color: var(--color-space);
+  margin-bottom: 20px;
+}
+.galton__text {
+  font-size: 1.3rem;
+  text-align: start;
+  color: var(--color-space);
+  line-height: 1.5;
+  margin: 20px;
+}
+.btn--simulator{
+  padding: 1.2rem 2rem;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 0px;
+  background-color: var(--color-yellow);
+  color: rgb(39, 35, 67);
+  height: 68px;  
+  margin-left: 350px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+.btn--simulator:hover{
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
