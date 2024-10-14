@@ -13,7 +13,6 @@
 }
 .galton-simulation__title {
   font-size: 1rem;
-  font-weight: bold;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -69,7 +68,6 @@
 }
 .bar-chart__label {
   color: var(--color-space);
-  font-weight: bold;
   text-align: center;
   width: 20px;
 }
@@ -116,6 +114,7 @@
 }
 /* HISTORIAL */
 .history {
+  background-color: var(--color-gray);
   padding: 20px;
 }
 .history__title {
@@ -132,7 +131,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 2px solid var(--color-space);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-space);
   border-radius: 8px;
   padding: 1.1rem;
 }
@@ -147,4 +147,30 @@
 }
 .historical-data__date{
   font-size: 0.8rem; 
+}
+/* HISTORIAL GRAFICA */
+.historical-bar__chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  column-gap: 5px;
+  height: 150px;
+}
+.historical-bar-chart__bar {
+  width: 15px;
+  background-color: var(--color-purple);
+  border-radius: 5px;
+}
+.historical-bar-chart__labels {
+  column-gap: 5px;
+  display: flex;
+  justify-content: center;
+  color: var(--color-space);
+  width: 100%;
+}
+.historical-chart__label {
+  color: var(--color-space);
+  font-size: 0.8rem;
+  text-align: center;
+  width: 15px;
 }
