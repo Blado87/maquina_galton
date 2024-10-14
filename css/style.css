@@ -52,6 +52,7 @@ h6 {
   padding: 10px 20px;
   color: var(--color-space);
   background-color: var(--color-gray);
+  width: 100%;
 }
 .navbar__container {
   display: flex;
@@ -85,6 +86,9 @@ h6 {
 .navbar__link:hover {
   color: var(--color-red);
 }
+.navbar__here{
+  text-decoration: underline;
+}
 /* FOOTER */
 .footer {
   display: flex;
@@ -93,6 +97,7 @@ h6 {
   background-color: var(--color-black);
   padding: 20px;
   text-align: center;
+  width: 100%;
 }
 .footer__content {
   display: flex;

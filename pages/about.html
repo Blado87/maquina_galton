@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Matemáticas de la Máquina de Galton</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/about.css">
+</head>
+
+<body>
+  <!-- barra de navegacion -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <div class="navbar__brand">
+        <img src="/assets/icons/joystick.svg" alt="logo pagina" class="navbar__icon">
+        <h1 class="navbar__title">Máquina de Galton</h1>
+      </div>
+      <ul class="navbar__menu">
+        <li><a href="/index.html" class="navbar__link">Inicio</a></li>
+        <li><a href="/pages/about.html" class="navbar__link navbar__here">Acerca de</a></li>
+        <li><a href="/pages/simulation.html" class="navbar__link">Portfolio</a></li>
+        <li><a href="/pages/credit.html" class="navbar__link">credit</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="header">
+    <h1 class="header__title">Matemáticas de la Máquina de Galton</h1>
+  </header>
+
+  <main class="content">
+    <section class="section section--intro">
+      <h2 class="section__title">Introducción</h2>
+      <p class="section__text">La máquina de Galton es un dispositivo que muestra cómo se distribuyen las probabilidades
+        de forma binomial y cómo estas se aproximan a la distribución normal.</p>
+    </section>
+
+    <section class="section section--steps">
+      <h2 class="section__title">Paso a Paso de las Matemáticas</h2>
+
+      <article class="step">
+        <h3 class="step__title">1. La estructura básica del tablero de Galton</h3>
+        <p class="step__description">El tablero tiene varias filas de clavos. Cada vez que una bola alcanza un clavo,
+          puede ir a la izquierda o a la derecha con probabilidad del 50%.</p>
+      </article>
+
+      <article class="step">
+        <h3 class="step__title">2. Probabilidad de cada trayectoria</h3>
+        <p class="step__description">Cada bola toma \(n\) decisiones durante su caída, y la probabilidad de que termine
+          en una posición determinada sigue un proceso binomial.</p>
+      </article>
+
+      <article class="step">
+        <h3 class="step__title">3. Distribución binomial</h3>
+        <p class="step__description">La fórmula de la distribución binomial es:</p>
+        <pre class="step__formula">
+P(k; n, p) = \(\binom{n}{k} p^k (1-p)^{n-k}\)
+            </pre>
+        <p class="step__description">Donde \(p = 0.5\) y \(k\) es el número de veces que la bola va a la derecha.</p>
+      </article>
+
+      <article class="step">
+        <h3 class="step__title">4. Acumulación de bolas</h3>
+        <p class="step__description">Las bolas se acumulan en la parte inferior, con una mayor concentración en las
+          posiciones centrales. Esto se explica con la distribución binomial.</p>
+      </article>
+
+      <article class="step">
+        <h3 class="step__title">5. Aproximación a la distribución normal</h3>
+        <p class="step__description">Conforme aumenta el número de filas, la distribución binomial se aproxima a una
+          distribución normal. Esta es la famosa "campana de Gauss".</p>
+      </article>
+    </section>
+  </main>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__social">
+        <a href="#" target="_blank" class="footer__link"><img src="/assets/icons/github.svg" alt="LinkedIn"
+            class="footer__icon" /></a>
+        <a href="#" target="_blank" class="footer__link"><img src="/assets/icons/linkedin.svg" alt="GitHub"
+            class="footer__icon" /></a>
+      </div>
+      <p class="footer__credits">Creado por BLADIMIR BENAVIDES</p>
+    </div>
+  </footer>
+</body>
+
+</html>

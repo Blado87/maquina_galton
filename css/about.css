@@ -1,0 +1,62 @@
+@import url("/css/style.css");
+
+/* Header */
+.header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+}
+
+.header__title {
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* Content */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section__title {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+.section__text {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Step */
+.step {
+    margin-top: 20px;
+}
+
+.step__title {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.step__description {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.step__formula {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: monospace;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #004d40;
+}
