@@ -1,62 +1,60 @@
 @import url("/css/style.css");
 
-/* Header */
-.header {
-    background-color: #4CAF50;
-    padding: 20px;
-    text-align: center;
-}
-
-.header__title {
-    color: #fff;
-    font-size: 2rem;
-}
-
-/* Content */
 .content {
     padding: 20px;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-}
-
-.section {
-    margin-bottom: 30px;
-}
-
-.section__title {
-    font-size: 1.8rem;
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 10px;
-}
-
-.section__text {
+    font-family: Arial, sans-serif;
+  }
+  
+  .content__title {
+    color: var(--color-black);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .content__paragraph {
+    color: var(--color-space);
     font-size: 1rem;
     line-height: 1.6;
-}
-
-/* Step */
-.step {
-    margin-top: 20px;
-}
-
-.step__title {
-    font-size: 1.4rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.step__description {
+    margin-bottom: 20px;
+  }
+  
+  .content__subtitle {
+    color: var(--color-blue);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  
+  .content__list {
+    margin: 20px 0;
+    padding-left: 20px;
+  }
+  
+  .content__list-item {
+    color: var(--color-black);
     font-size: 1rem;
-    line-height: 1.6;
-}
-
-.step__formula {
-    background-color: #e0f7fa;
-    padding: 10px;
-    border-radius: 5px;
-    font-family: monospace;
-    margin-top: 10px;
     margin-bottom: 10px;
-    color: #004d40;
-}
+  }
+  
+  /* Image styles */
+  .content__image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border: 2px solid var(--color-space);
+    border-radius: 8px;
+  }
+  
+  /* Highlighted elements */
+  .content__text--important {
+    font-weight: bold;
+    color: var(--color-red);
+  }
+  
+  .content__text--italic {
+    font-style: italic;
+    color: var(--color-green);
+    background-color: var(--color-gray);
+  }

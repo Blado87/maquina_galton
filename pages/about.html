@@ -21,59 +21,60 @@
       <ul class="navbar__menu">
         <li><a href="/index.html" class="navbar__link">Inicio</a></li>
         <li><a href="/pages/about.html" class="navbar__link navbar__here">Acerca de</a></li>
-        <li><a href="/pages/simulation.html" class="navbar__link">Portfolio</a></li>
+        <li><a href="#" class="navbar__link">Portfolio</a></li>
         <li><a href="/pages/credit.html" class="navbar__link">credit</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="header">
-    <h1 class="header__title">Matemáticas de la Máquina de Galton</h1>
-  </header>
-
   <main class="content">
-    <section class="section section--intro">
-      <h2 class="section__title">Introducción</h2>
-      <p class="section__text">La máquina de Galton es un dispositivo que muestra cómo se distribuyen las probabilidades
-        de forma binomial y cómo estas se aproximan a la distribución normal.</p>
-    </section>
-
-    <section class="section section--steps">
-      <h2 class="section__title">Paso a Paso de las Matemáticas</h2>
-
-      <article class="step">
-        <h3 class="step__title">1. La estructura básica del tablero de Galton</h3>
-        <p class="step__description">El tablero tiene varias filas de clavos. Cada vez que una bola alcanza un clavo,
-          puede ir a la izquierda o a la derecha con probabilidad del 50%.</p>
-      </article>
-
-      <article class="step">
-        <h3 class="step__title">2. Probabilidad de cada trayectoria</h3>
-        <p class="step__description">Cada bola toma \(n\) decisiones durante su caída, y la probabilidad de que termine
-          en una posición determinada sigue un proceso binomial.</p>
-      </article>
-
-      <article class="step">
-        <h3 class="step__title">3. Distribución binomial</h3>
-        <p class="step__description">La fórmula de la distribución binomial es:</p>
-        <pre class="step__formula">
-P(k; n, p) = \(\binom{n}{k} p^k (1-p)^{n-k}\)
-            </pre>
-        <p class="step__description">Donde \(p = 0.5\) y \(k\) es el número de veces que la bola va a la derecha.</p>
-      </article>
-
-      <article class="step">
-        <h3 class="step__title">4. Acumulación de bolas</h3>
-        <p class="step__description">Las bolas se acumulan en la parte inferior, con una mayor concentración en las
-          posiciones centrales. Esto se explica con la distribución binomial.</p>
-      </article>
-
-      <article class="step">
-        <h3 class="step__title">5. Aproximación a la distribución normal</h3>
-        <p class="step__description">Conforme aumenta el número de filas, la distribución binomial se aproxima a una
-          distribución normal. Esta es la famosa "campana de Gauss".</p>
-      </article>
-    </section>
+    <h1 class="content__title">Matemáticas de la Máquina de Galton</h1>
+    <p class="content__paragraph">
+      La máquina de Galton, también conocida como "tablero de Galton" o "tablero de clavos", es un dispositivo que ilustra principios fundamentales de probabilidad y estadística, como la distribución binomial y la distribución normal. Vamos a desglosar las matemáticas involucradas paso a paso:
+    </p>
+    <h2 clas="content__subtitle">1. La estructura básica del tablero de Galton</h2>
+    <p class="content__paragraph">
+      El tablero de Galton consiste en una serie de filas con clavos dispuestos en forma de triángulo invertido. Las bolas caen desde la parte superior y, al llegar a cada clavo, pueden rebotar hacia la izquierda o hacia la derecha con igual probabilidad (50% cada dirección). Eventualmente, las bolas llegan a la parte inferior del tablero y se acumulan en diferentes posiciones.
+    </p>
+    <h2 clas="content__subtitle">2. Probabilidad de cada trayectoria</h2>
+    <p class="content__paragraph">
+      Cuando una bola llega a un clavo, tiene dos opciones: puede ir a la izquierda o a la derecha, con una probabilidad del 50% para cada dirección. Si hay <i class="content__text--italic">n</i> filas de clavos en el tablero, cada bola realiza <i class="content__text--italic">n</i> elecciones binarias (izquierda o derecha) durante su caída.
+    </p>
+    <p class="content__paragraph">
+      Si una bola cae por un camino en el que toma <i class="content__text--italic">k</i> veces a la derecha y <i class="content__text--italic">n - k</i> veces a la izquierda, llega a una posición determinada. La cantidad total de trayectorias posibles para que una bola termine en una columna particular está dada por la <strong class="content__text--important">combinatoria.</strong>
+    </p>
+    <h2 clas="content__subtitle">3. Distribución binomial</h2>
+    <p class="content__paragraph">
+      La trayectoria de cada bola sigue un proceso binomial, en el que se cuentan las veces que la bola va hacia la derecha. Si <i class="content__text--italic">p</i> es la probabilidad de ir a la derecha en cada paso (en este caso <i class="content__text--italic">p = 0.5</i>), la probabilidad de que una bola tome <i class="content__text--italic">k</i> veces la dirección hacia la derecha en <i class="content__text--italic">n</i> pasos sigue una <strong class="content__text--important">distribución binomial.</strong> La fórmula es:
+    </p>
+    <ul class="content__list">
+      <li class="content__list-item">- <i class="content__text--italic">p</i> es la probabilidad de ir a la derecha (0.5 en este caso).</li>
+      <li class="content__list-item">- <i class="content__text--italic">k</i> es el número de veces que la bola va a la derecha.</li>
+      <li class="content__list-item">- <i class="content__text--italic">n - k</i> es el número de veces que la bola va a la izquierda.</li> 
+    </ul>
+      <img src="/assets/img/formula1.png" alt="Formula 1" class="content__image">
+    <h2 clas="content__subtitle">4. Acumulación de bolas en la parte inferior</h2>
+    <p class="content__paragraph">
+      La posición final de una bola está determinada por cuántas veces fue a la derecha. A medida que más bolas caen por el tablero, se empiezan a acumular en diferentes posiciones en la parte inferior.
+    </p>
+    <p class="content__paragraph">
+      Para <i class="content__text--italic">n</i> filas, el número total de columnas al final es <i class="content__text--italic">n +  1</i> que corresponden a las posibles posiciones de las bolas (desde ir siempre a la izquierda hasta siempre a la derecha).
+    </p>
+    <h2 clas="content__subtitle">5. Aproximación a la distribución normal</h2>
+    <p class="content__paragraph">
+      Si <i class="content__text--italic">n</i> (el número de filas) es suficientemente grande, la distribución binomial se aproxima a una distribución normal (o gaussiana). Esto es un resultado del teorema central del límite, que dice que a medida que aumentamos el número de ensayos (en este caso, el número de filas de clavos), la distribución de probabilidades tiende a formar una curva en forma de campana, con una mayor acumulación de bolas en el centro y menos en los extremos.
+    </p>
+    <p class="content__paragraph">La distribución normal tiene la siguiente forma:</p>
+      <img src="/assets/img/formula2.png" alt="Formula 2" class="content__image">
+    <ul class="content__list">
+      <li class="content__list-item">- <i class="content__text--italic">μ</i> es la media (que en este caso corresponde a la columna central).</li>
+      <li class="content__list-item">- <i class="content__text--italic">σ</i> es la desviación estándar, que depende de <i class="content__text--italic">n</i> y la probabilidad <i class="content__text--italic">p</i>.</li>
+    </ul>
+    <h2 clas="content__subtitle">6. Relación con la campana de Gauss</h2>
+    <p class="content__paragraph">
+      Finalmente, cuando se observan los resultados en la parte inferior del tablero, la mayoría de las bolas tienden a acumularse en las posiciones centrales (las que corresponden a aproximadamente la mitad de las veces a la izquierda y la mitad a la derecha). A medida que te alejas del centro, la cantidad de bolas disminuye simétricamente, formando una curva en forma de campana, lo que refleja la <strong class="content__text--important">distribución normal</strong>.
+    </p>
+      <img src="/assets/img/campanaGauss.png" alt="Campana de Gauss" class="content__image">
   </main>
   <!-- footer -->
   <footer class="footer">
