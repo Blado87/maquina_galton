@@ -29,11 +29,13 @@ body {
   padding: 40px;
 }
 .galton__title {
+  font-family: var(--fuente-Raleway-Regular);
   font-size: 3.5rem;
   color: var(--color-space);
   margin-bottom: 20px;
 }
 .galton__text {
+  font-family: var(--fuente-Raleway-Regular);
   font-size: 1.3rem;
   text-align: start;
   color: var(--color-space);
@@ -41,6 +43,7 @@ body {
   margin: 20px;
 }
 .btn--simulator{
+  font-family: var(--fuente-Raleway-Regular);
   padding: 1.2rem 2rem;
   border-radius: 3px;
   font-size: 1.1rem;

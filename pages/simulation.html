@@ -16,7 +16,7 @@
     <div class="navbar__container">
       <div class="navbar__brand">
         <img src="/assets/icons/joystick.svg" alt="logo pagina" class="navbar__icon">
-        <h1 class="navbar__title">Máquina de Galton</h1>
+        <h1 class="navbar__title"><a href="/index.html">Máquina de Galton</a></h1>
       </div>
       <ul class="navbar__menu">
         <li><a href="/index.html" class="navbar__link">Inicio</a></li>
@@ -291,11 +291,17 @@
   </section>
   <!-- HISTORIAL -->
   <section class="history">
-    <p class="history__title">Historial de simulaciones</p>
+    <div class="control-history">
+      <p class="history__title">Historial de simulaciones</p>
+      <div class="control-trash">
+        <p>Borrar historial:</p>
+        <button class="control-trash__button"><img src="/assets/icons/trash-fill.svg" alt="Borrar historial"></button>
+      </div>
+    </div>     
     <div class="history__results">
       <div class="bar-container-history">
         <div class="historical__data">
-          <div class="historical-data__number">Esferas:150</div>
+          <div class="historical-data__number">Esferas: 150</div>
           <div class="historical-data__date">Fecha: 10/09/2024</div>
         </div>
         <div class="historical-bar__chart">
@@ -323,8 +329,7 @@
           <span class="historical-chart__label">10</span>
         </div>
       </div>
-    </div>
-    <button>Borrar historial</button>  
+    </div> 
   </section>
   <!-- footer -->
   <footer class="footer">
@@ -338,7 +343,7 @@
       <p class="footer__credits">Creado por BLADIMIR BENAVIDES</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="/js/script.js"></script>
 </body>
 
 </html>

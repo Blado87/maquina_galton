@@ -20,6 +20,7 @@ html, body{
 }
 
 .credits__text {
+    font-family: var(--fuente-Raleway-Regular);
     font-size: 1rem;
     color: var(--color-space);
 }

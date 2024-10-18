@@ -15,6 +15,7 @@
   }
   
   .content__paragraph {
+    font-family: var(--fuente-Raleway-Regular);
     color: var(--color-space);
     font-size: 1rem;
     line-height: 1.6;

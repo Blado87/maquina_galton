@@ -16,7 +16,7 @@
     <div class="navbar__container">
       <div class="navbar__brand">
         <img src="/assets/icons/joystick.svg" alt="logo pagina" class="navbar__icon">
-        <h1 class="navbar__title">Máquina de Galton</h1>
+        <h1 class="navbar__title"><a href="/index.html">Máquina de Galton</a></h1>
       </div>
       <ul class="navbar__menu">
         <li><a href="/index.html" class="navbar__link">Inicio</a></li>
@@ -34,35 +34,36 @@
     </p>
     <h2 clas="content__subtitle">1. La estructura básica del tablero de Galton</h2>
     <p class="content__paragraph">
-      El tablero de Galton consiste en una serie de filas con clavos dispuestos en forma de triángulo invertido. Las bolas caen desde la parte superior y, al llegar a cada clavo, pueden rebotar hacia la izquierda o hacia la derecha con igual probabilidad (50% cada dirección). Eventualmente, las bolas llegan a la parte inferior del tablero y se acumulan en diferentes posiciones.
+      El tablero de Galton consiste en una serie de filas con clavos dispuestos en forma de triángulo invertido. Las esferas caen desde la parte superior y, al llegar a cada clavo, pueden rebotar hacia la izquierda o hacia la derecha con igual probabilidad (50% cada dirección). Eventualmente, las esferas llegan a la parte inferior del tablero y se acumulan en diferentes posiciones.
     </p>
+    <img src="/assets/img/ballPin.png" alt="Grafica de rebote" class="content__image">
     <h2 clas="content__subtitle">2. Probabilidad de cada trayectoria</h2>
     <p class="content__paragraph">
-      Cuando una bola llega a un clavo, tiene dos opciones: puede ir a la izquierda o a la derecha, con una probabilidad del 50% para cada dirección. Si hay <i class="content__text--italic">n</i> filas de clavos en el tablero, cada bola realiza <i class="content__text--italic">n</i> elecciones binarias (izquierda o derecha) durante su caída.
+      Cuando una esfera llega a un clavo, tiene dos opciones: puede ir a la izquierda o a la derecha, con una probabilidad del 50% para cada dirección. Si hay <i class="content__text--italic">n</i> filas de clavos en el tablero, cada esfera realiza <i class="content__text--italic">n</i> elecciones binarias (izquierda o derecha) durante su caída.
     </p>
     <p class="content__paragraph">
-      Si una bola cae por un camino en el que toma <i class="content__text--italic">k</i> veces a la derecha y <i class="content__text--italic">n - k</i> veces a la izquierda, llega a una posición determinada. La cantidad total de trayectorias posibles para que una bola termine en una columna particular está dada por la <strong class="content__text--important">combinatoria.</strong>
+      Si una esfera cae por un camino en el que toma <i class="content__text--italic">k</i> veces a la derecha y <i class="content__text--italic">n - k</i> veces a la izquierda, llega a una posición determinada. La cantidad total de trayectorias posibles para que una esfera termine en una columna particular está dada por la <strong class="content__text--important">combinatoria.</strong>
     </p>
     <h2 clas="content__subtitle">3. Distribución binomial</h2>
     <p class="content__paragraph">
-      La trayectoria de cada bola sigue un proceso binomial, en el que se cuentan las veces que la bola va hacia la derecha. Si <i class="content__text--italic">p</i> es la probabilidad de ir a la derecha en cada paso (en este caso <i class="content__text--italic">p = 0.5</i>), la probabilidad de que una bola tome <i class="content__text--italic">k</i> veces la dirección hacia la derecha en <i class="content__text--italic">n</i> pasos sigue una <strong class="content__text--important">distribución binomial.</strong> La fórmula es:
+      La trayectoria de cada esfera sigue un proceso binomial, en el que se cuentan las veces que la esfera va hacia la derecha. Si <i class="content__text--italic">p</i> es la probabilidad de ir a la derecha en cada paso (en este caso <i class="content__text--italic">p = 0.5</i>), la probabilidad de que una esfera tome <i class="content__text--italic">k</i> veces la dirección hacia la derecha en <i class="content__text--italic">n</i> pasos sigue una <strong class="content__text--important">distribución binomial.</strong> La fórmula es:
     </p>
     <ul class="content__list">
       <li class="content__list-item">- <i class="content__text--italic">p</i> es la probabilidad de ir a la derecha (0.5 en este caso).</li>
-      <li class="content__list-item">- <i class="content__text--italic">k</i> es el número de veces que la bola va a la derecha.</li>
-      <li class="content__list-item">- <i class="content__text--italic">n - k</i> es el número de veces que la bola va a la izquierda.</li> 
+      <li class="content__list-item">- <i class="content__text--italic">k</i> es el número de veces que la esfera va a la derecha.</li>
+      <li class="content__list-item">- <i class="content__text--italic">n - k</i> es el número de veces que la esfera va a la izquierda.</li> 
     </ul>
       <img src="/assets/img/formula1.png" alt="Formula 1" class="content__image">
-    <h2 clas="content__subtitle">4. Acumulación de bolas en la parte inferior</h2>
+    <h2 clas="content__subtitle">4. Acumulación de esferas en la parte inferior</h2>
     <p class="content__paragraph">
-      La posición final de una bola está determinada por cuántas veces fue a la derecha. A medida que más bolas caen por el tablero, se empiezan a acumular en diferentes posiciones en la parte inferior.
+      La posición final de una esfera está determinada por cuántas veces fue a la derecha. A medida que más esferas caen por el tablero, se empiezan a acumular en diferentes posiciones en la parte inferior.
     </p>
     <p class="content__paragraph">
-      Para <i class="content__text--italic">n</i> filas, el número total de columnas al final es <i class="content__text--italic">n +  1</i> que corresponden a las posibles posiciones de las bolas (desde ir siempre a la izquierda hasta siempre a la derecha).
+      Para <i class="content__text--italic">n</i> filas, el número total de columnas al final es <i class="content__text--italic">n +  1</i> que corresponden a las posibles posiciones de las esferas (desde ir siempre a la izquierda hasta siempre a la derecha).
     </p>
     <h2 clas="content__subtitle">5. Aproximación a la distribución normal</h2>
     <p class="content__paragraph">
-      Si <i class="content__text--italic">n</i> (el número de filas) es suficientemente grande, la distribución binomial se aproxima a una distribución normal (o gaussiana). Esto es un resultado del teorema central del límite, que dice que a medida que aumentamos el número de ensayos (en este caso, el número de filas de clavos), la distribución de probabilidades tiende a formar una curva en forma de campana, con una mayor acumulación de bolas en el centro y menos en los extremos.
+      Si <i class="content__text--italic">n</i> (el número de filas) es suficientemente grande, la distribución binomial se aproxima a una distribución normal (o gaussiana). Esto es un resultado del teorema central del límite, que dice que a medida que aumentamos el número de ensayos (en este caso, el número de filas de clavos), la distribución de probabilidades tiende a formar una curva en forma de campana, con una mayor acumulación de esferas en el centro y menos en los extremos.
     </p>
     <p class="content__paragraph">La distribución normal tiene la siguiente forma:</p>
       <img src="/assets/img/formula2.png" alt="Formula 2" class="content__image">
@@ -72,7 +73,7 @@
     </ul>
     <h2 clas="content__subtitle">6. Relación con la campana de Gauss</h2>
     <p class="content__paragraph">
-      Finalmente, cuando se observan los resultados en la parte inferior del tablero, la mayoría de las bolas tienden a acumularse en las posiciones centrales (las que corresponden a aproximadamente la mitad de las veces a la izquierda y la mitad a la derecha). A medida que te alejas del centro, la cantidad de bolas disminuye simétricamente, formando una curva en forma de campana, lo que refleja la <strong class="content__text--important">distribución normal</strong>.
+      Finalmente, cuando se observan los resultados en la parte inferior del tablero, la mayoría de las esferas tienden a acumularse en las posiciones centrales (las que corresponden a aproximadamente la mitad de las veces a la izquierda y la mitad a la derecha). A medida que te alejas del centro, la cantidad de esferas disminuye simétricamente, formando una curva en forma de campana, lo que refleja la <strong class="content__text--important">distribución normal</strong>.
     </p>
       <img src="/assets/img/campanaGauss.png" alt="Campana de Gauss" class="content__image">
   </main>
